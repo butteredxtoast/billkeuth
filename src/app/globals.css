@@ -3,19 +3,43 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground: #1a1a1a;
+  --background-start: #f0f5e9;
+  --background-end: #e1ebd1;
+  --primary: #2d5a27;
+  --secondary: #4a8740;
+  --accent: #7ab547;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    135deg,
+    var(--background-start) 0%,
+    var(--background-end) 100%
+  );
+  background-attachment: fixed;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+.project-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(45, 90, 39, 0.2);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.section-fade {
+  background: linear-gradient(180deg, transparent 0%, var(--background-end) 100%);
 }
