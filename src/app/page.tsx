@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaInstagram, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 
-const projects = [
+/* const projects = [
   {
     title: "Project 1",
     description: "Description of project 1 goes here. You can edit this later with your actual project details.",
@@ -16,13 +16,23 @@ const projects = [
     link: "#"
   },
   // Add more projects as needed
-];
+]; */
 
 export default function Home() {
   return (
     <main className="min-h-screen p-8 md:p-24 max-w-6xl mx-auto">
       {/* Header Section */}
       <section className="mb-16 glass-card rounded-xl p-8 md:p-12">
+        <div className="flex justify-center mb-8">
+          <Image
+            src="https://www.gravatar.com/avatar/247fb1877eab599bc00263e85e9777d3?s=200"
+            alt="Bill Keuth"
+            width={150}
+            height={150}
+            className="rounded-full border-4 border-primary"
+            priority
+          />
+        </div>
         <h1 className="text-4xl md:text-6xl font-bold text-primary mb-4 bg-gradient-to-r from-primary to-secondary inline-block text-transparent bg-clip-text">
           Bill Keuth
         </h1>
@@ -88,7 +98,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Projects Section - Uncomment when ready to add project details
       <section className="space-y-8">
         <h2 className="text-3xl font-bold text-primary mb-8 bg-gradient-to-r from-primary to-secondary inline-block text-transparent bg-clip-text">
           Projects
@@ -116,6 +126,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      */}
     </main>
   );
 }
