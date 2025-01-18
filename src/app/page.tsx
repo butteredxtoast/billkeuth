@@ -91,8 +91,8 @@ export default function Home() {
           </div>
 
           <p className="text-lg mt-6">
-            At heart, I'm just someone who believes in the power of community. Whether it's through 
-            technology, movement, or simply sharing space with others, I've found that genuine 
+            At heart, I&apos;m just someone who believes in the power of community. Whether it&apos;s through 
+            technology, movement, or simply sharing space with others, I&apos;ve found that genuine 
             connections make everything better.
           </p>
         </div>
