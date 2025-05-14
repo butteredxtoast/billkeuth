@@ -93,32 +93,7 @@ export default function Home() {
         </div>
         <div className="prose max-w-none text-foreground font-[Quicksand]">
           <p className="text-lg space-y-6 font-[Quicksand]">
-            Howdy! I spend my days writing code and my early mornings co-leading the November Project SF 
-            community.
-          </p>
-          <div className="mt-6 space-y-2">
-            <p className="text-lg font-[Quicksand]">
-              Outside of work, I find joy in:
-            </p>
-            <ul className="list-none space-y-2 ml-4">
-              <li className="flex items-center gap-2">
-                <span className="text-accent">→</span> 
-                Supporting fellow runners (I am an RRCA certified running coach)
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-accent">→</span>
-                Finding peace on Bay Area trails
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-accent">→</span>
-                Creating music and building small, meaningful projects
-              </li>
-            </ul>
-          </div>
-          <p className="text-lg mt-6 font-[Quicksand]">
-            At heart, I&apos;m just someone who believes in the power of community. Whether it&apos;s through 
-            technology, movement, or simply sharing space with others, I&apos;ve found that genuine 
-            connections make everything better.
+            I'm a software engineer who finds patterns everywhere - whether I'm architecting fault-tolerant systems or growing November Project SF from a small group to 40+ weekly runners. I build things that scale: microservices, communities, and solutions to everyday problems. Whether debugging distributed systems during the week or coaching fellow runners on Bay Area trails, I'm energized by creating connections. When not coding or running, you'll find me on meandering city walks with my wife, collecting stories and snacks in equal measure.
           </p>
         </div>
       </section>
