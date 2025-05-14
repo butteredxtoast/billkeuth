@@ -1,22 +1,43 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaGithub, FaLinkedin, FaInstagram, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaMapMarkerAlt, FaEnvelope, FaExternalLinkAlt } from 'react-icons/fa';
+import { SiNextdotjs, SiTypescript, SiReact, SiTailwindcss, SiPhp, SiLaravel, SiDocker, SiRedis } from 'react-icons/si';
+import { IconType } from 'react-icons';
 
-/* const projects = [
+// Define tech icons mapping
+const techIcons: Record<string, IconType> = {
+  "Next.js": SiNextdotjs,
+  "TypeScript": SiTypescript,
+  "React": SiReact,
+  "Tailwind CSS": SiTailwindcss,
+  "Upstash Redis": SiRedis,
+  "NextAuth": SiReact,
+  "PHP": SiPhp,
+  "Laravel": SiLaravel,
+  "Docker": SiDocker,
+  "Slack API": SiReact
+};
+
+const projects = [
   {
-    title: "Project 1",
-    description: "Description of project 1 goes here. You can edit this later with your actual project details.",
+    title: "NPSF Info",
+    description: "A centralized resource hub for fitness group captains, solving the problem of scattered materials across different platforms with an integrated admin panel for content management.",
     image: "/images/project-placeholder.jpg",
-    link: "#"
+    liveUrl: "https://npsf.info",
+    githubUrl: "#", // Add your GitHub repo URL
+    techStack: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Upstash Redis", "NextAuth"],
+    featured: true
   },
   {
-    title: "Project 2",
-    description: "Description of project 2 goes here. You can edit this later with your actual project details.",
+    title: "Coffee Chat",
+    description: "A custom Slack bot that automates coffee chat matchmaking with intelligent pairing algorithms, replacing manual workflow with automated matching, reminders, and follow-up tracking.",
     image: "/images/project-placeholder.jpg",
-    link: "#"
-  },
-  // Add more projects as needed
-]; */
+    liveUrl: "https://match-chat.social",
+    githubUrl: "#", // Add your GitHub repo URL
+    techStack: ["PHP", "Laravel", "Tailwind CSS", "Docker", "Slack API"],
+    featured: false
+  }
+];
 
 export default function Home() {
   return (
@@ -98,7 +119,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section - Uncomment when ready to add project details
+      {/* Projects Section */}
       <section className="space-y-8">
         <h2 className="text-3xl font-bold text-primary mb-8 bg-gradient-to-r from-primary to-secondary inline-block text-transparent bg-clip-text">
           Projects
@@ -113,20 +134,59 @@ export default function Home() {
                   fill
                   className="object-cover"
                 />
+                {project.featured && (
+                  <div className="absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Featured
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-primary mb-2">{project.title}</h3>
-                <p className="text-secondary mb-4">{project.description}</p>
-                <Link href={project.link} 
-                      className="text-primary hover:text-secondary transition-colors">
-                  Learn more →
-                </Link>
+                <p className="text-secondary mb-4 text-sm leading-relaxed">{project.description}</p>
+                
+                {/* Tech Stack */}
+                <div className="mb-4">
+                  <p className="text-xs font-semibold text-gray-600 mb-2">TECH STACK</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.techStack.map((tech, techIndex) => {
+                      const IconComponent = techIcons[tech];
+                      return (
+                        <span
+                          key={techIndex}
+                          className="inline-flex items-center gap-1 px-2 py-1 bg-gray-100 text-gray-700 rounded-md text-xs font-medium"
+                        >
+                          {IconComponent && <IconComponent size={12} />}
+                          {tech}
+                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex gap-3">
+                  <Link
+                    href={project.liveUrl}
+                    target="_blank"
+                    className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-md hover:bg-secondary transition-colors text-sm font-medium"
+                  >
+                    <FaExternalLinkAlt size={12} />
+                    View Live
+                  </Link>
+                  <Link
+                    href={project.githubUrl}
+                    target="_blank"
+                    className="flex items-center gap-2 px-4 py-2 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition-colors text-sm font-medium"
+                  >
+                    <FaGithub size={12} />
+                    View Code
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </section>
-      */}
     </main>
   );
 }
