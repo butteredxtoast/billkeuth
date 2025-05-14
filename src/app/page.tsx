@@ -93,7 +93,7 @@ export default function Home() {
         </div>
         <div className="prose max-w-none text-foreground font-[Quicksand]">
           <p className="text-lg space-y-6 font-[Quicksand]">
-            I'm a software engineer who finds patterns everywhere - whether I'm architecting fault-tolerant systems or growing November Project SF from a small group to 40+ weekly runners. I build things that scale: microservices, communities, and solutions to everyday problems. Whether debugging distributed systems during the week or coaching fellow runners on Bay Area trails, I'm energized by creating connections. When not coding or running, you'll find me on meandering city walks with my wife, collecting stories and snacks in equal measure.
+            I&apos;m a software engineer who finds patterns everywhere - whether I&apos;m architecting fault-tolerant systems or growing November Project SF from a small group to 40+ weekly runners. I build things that scale: microservices, communities, and solutions to everyday problems. Whether debugging distributed systems during the week or coaching fellow runners on Bay Area trails, I&apos;m energized by creating connections. When not coding or running, you&apos;ll find me on meandering city walks with my wife, collecting stories and snacks in equal measure.
           </p>
         </div>
       </section>
