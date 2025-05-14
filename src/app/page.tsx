@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaGithub, FaLinkedin, FaInstagram, FaMapMarkerAlt, FaEnvelope, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaMapMarkerAlt, FaEnvelope, FaExternalLinkAlt, FaChevronDown } from 'react-icons/fa';
 import { SiNextdotjs, SiTypescript, SiReact, SiTailwindcss, SiPhp, SiLaravel, SiDocker, SiRedis } from 'react-icons/si';
 import { IconType } from 'react-icons';
 
@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <main className="min-h-screen p-8 md:p-24 max-w-6xl mx-auto">
       {/* Header Section */}
-      <section className="mb-16 glass-card rounded-xl p-8 md:p-12">
+      <section className="mb-8 glass-card rounded-xl p-8 md:p-12">
         <div className="flex justify-center mb-8">
           <Image
             src="https://www.gravatar.com/avatar/247fb1877eab599bc00263e85e9777d3?s=200"
@@ -118,6 +118,11 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* Down Arrow Indicator */}
+      <div className="flex justify-center mb-8">
+        <FaChevronDown className="text-primary animate-bounce" size={32} />
+      </div>
 
       {/* Projects Section */}
       <section className="space-y-8">
