@@ -32,7 +32,7 @@ const projects = [
     title: "Coffee Chat",
     description: "A custom Slack bot that automates coffee chat matchmaking with intelligent pairing algorithms, replacing manual workflow with automated matching, reminders, and follow-up tracking.",
     image: "/images/coffee-chat.png",
-    liveUrl: "https://match-chat.social",
+    liveUrl: "",
     githubUrl: "https://github.com/butteredxtoast/coffee-chat",
     techStack: ["PHP", "Laravel", "Tailwind CSS", "Docker", "Slack API"],
     featured: false
@@ -170,14 +170,16 @@ export default function Home() {
                 </div>
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  <Link
-                    href={project.liveUrl}
-                    target="_blank"
-                    className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-md hover:bg-secondary transition-colors text-sm font-medium font-[Quicksand]"
-                  >
-                    <FaExternalLinkAlt size={12} />
-                    View Live
-                  </Link>
+                  {project.liveUrl && (
+                    <Link
+                      href={project.liveUrl}
+                      target="_blank"
+                      className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-md hover:bg-secondary transition-colors text-sm font-medium font-[Quicksand]"
+                    >
+                      <FaExternalLinkAlt size={12} />
+                      View Live
+                    </Link>
+                  )}
                   <Link
                     href={project.githubUrl}
                     target="_blank"
