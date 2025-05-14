@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--primary)",
-        secondary: "var(--secondary)",
-        accent: "var(--accent)",
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#386641", // deep forest green
+        secondary: "#6a994e", // moss green
+        accent: "#bc4749", // clay red
+        background: "#f2e8cf", // sand
+        foreground: "#283618", // dark olive
       },
     },
   },
